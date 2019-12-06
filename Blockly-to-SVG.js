@@ -10,6 +10,7 @@ if (canvas.children[0] !== undefined) {
 
     var bbox = document.getElementsByClassName("blocklyBlockCanvas")[0].getBBox();
     var content = new XMLSerializer().serializeToString(canvas);
+    content = content.replace(/..\/blockly\/media\/kn02.png/g,'https://code.kniwwelino.lu/blockly/media/kn02.png');
 
     var xml = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="'
         + bbox.width + '" height="' + bbox.height + '" viewBox=" ' + bbox.x + ' ' + bbox.y + ' ' + bbox.width + ' ' + bbox.height + '">' +

@@ -20,6 +20,6 @@ if (canvas.children[0] !== undefined) {
     let element = document.createElement('a')
     blow = new Blob([xml], { type: 'image/svg+xml;base64' });
     element.href = URL.createObjectURL(blow);
-    element.download = 'bloques.svg';
+    element.download = document.getElementById('sketch_name').value+'.svg';
     element.click();
 }
